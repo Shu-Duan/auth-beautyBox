@@ -26,7 +26,7 @@ const _export = (sequelize,DataTypes)=>{
     userAuthFunction.belongsToMany(model.userRole, {
       through: model.userFunctionMapping,
       as: 'roleList',
-      foreignKey: 'func_uuid'
+      foreignKey: 'function_uuid'
     });
   };
   return userAuthFunction;
