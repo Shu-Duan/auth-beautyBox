@@ -3,7 +3,7 @@ import express from 'express';
 
 const app = express();
 
-app.use('/auth', authRoutes);
+app.use('/app/auth', authRoutes);
 app.listen(81, (error) => {
   if (error) {
     console.error(error);

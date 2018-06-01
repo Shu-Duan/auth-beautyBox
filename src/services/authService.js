@@ -16,7 +16,7 @@ authService.queryFuncByUser=async function queryFuncByUser(account){
 					as:'functionList'
 				}]
 			}]
-		}
+	}
 	]});
 	let ajaxres=new ajaxRes();
 	if (data.length === 0) {

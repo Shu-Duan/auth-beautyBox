@@ -4,10 +4,10 @@ import ajaxRes from '../object/ajaxResponse.js';
 
 const authRoutes = Express.Router();
 
-authRoutes.get('/queryFuncByUser', async function(req, res) {
+authRoutes.get('/role/:account', async function(req, res) {
 	let ajaxres=new ajaxRes();
         
-	const result=await authService.queryFuncByUser(req.query.account);
+	const result=await authService.queryFuncByUser(req.params.account);
 	if(result.status){
 		res.json(result);
 	}
