@@ -12,4 +12,12 @@ authRoutes.get('/role/:account', function(req, res) {
 	});
 });
 
+authRoutes.post('/account', function(req, res) {
+	let ajaxres = new ajaxRes();
+	authService.createUser().then(data => {
+		ajaxres.data = data;
+		res.json(ajaxres);
+	});
+});
+
 export default authRoutes;
